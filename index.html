@@ -564,22 +564,30 @@
     btn.textContent = 'Sending...';
     btn.disabled = true;
 
-    // Create hidden iframe to catch the redirect
+    // Create hidden iframe to catch redirect
     const iframeName = 'beehiiv-' + formId + '-' + Date.now();
     const iframe = document.createElement('iframe');
     iframe.name = iframeName;
     iframe.style.display = 'none';
     document.body.appendChild(iframe);
 
-    // Create and submit form to Beehiiv
+    // Create form matching Beehiiv's exact structure
     const form = document.createElement('form');
     form.method = 'POST';
-    form.action = 'https://subscribe-forms.beehiiv.com/620bd141-31a8-43fb-a9a4-be257cc7d445';
+    form.action = 'https://subscribe-forms.beehiiv.com/api/submit';
     form.target = iframeName;
 
+    // form_id (required by Beehiiv)
+    const formIdInput = document.createElement('input');
+    formIdInput.type = 'hidden';
+    formIdInput.name = 'form_id';
+    formIdInput.value = '620bd141-31a8-43fb-a9a4-be257cc7d445';
+    form.appendChild(formIdInput);
+
+    // Email field — Beehiiv expects "form[email]"
     const emailInput = document.createElement('input');
     emailInput.type = 'hidden';
-    emailInput.name = 'email';
+    emailInput.name = 'form[email]';
     emailInput.value = email;
     form.appendChild(emailInput);
 
