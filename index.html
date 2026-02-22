@@ -3,344 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VedicTrades - Your Path to Funded Trading</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Vedic Trades - Prop Firm Guides & Trading Education</title>
+    <meta name="description" content="Master prop firm trading with proven strategies, honest reviews, and comprehensive guides from a trader who's withdrawn $40k+">
     <style>
-        *, *::before, *::after {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --bg-primary: #0A0E17;
-            --bg-card: #111827;
-            --bg-card-hover: #1a2332;
-            --accent: #00E39E;
-            --accent-glow: rgba(0, 227, 158, 0.15);
-            --accent-dim: #00b37d;
-            --text-primary: #F1F5F9;
-            --text-secondary: #94A3B8;
-            --text-muted: #64748B;
-            --border: #1E293B;
-            --gold: #F5B731;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: 'DM Sans', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: #000000;
+            color: #f5f5f7;
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* Grid background */
-        body::before {
-            content: '';
+        /* Gradient Background */
+        .gradient-bg {
             position: fixed;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(0, 227, 158, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 227, 158, 0.03) 1px, transparent 1px);
-            background-size: 60px 60px;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 0 24px;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Top Bar */
-        .topbar {
-            padding: 16px 0;
-            border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(12px);
-            position: sticky;
             top: 0;
-            z-index: 100;
-            background: rgba(10, 14, 23, 0.85);
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(ellipse at top, rgba(0, 183, 255, 0.15), transparent 50%),
+                        radial-gradient(ellipse at bottom, rgba(16, 185, 129, 0.1), transparent 50%),
+                        #000000;
         }
 
-        .topbar-inner {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        /* Floating orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            animation: float 20s ease-in-out infinite;
         }
 
-        .topbar .logo {
-            font-family: 'Space Mono', monospace;
-            font-size: 14px;
-            color: var(--accent);
-            letter-spacing: 2px;
-            text-transform: uppercase;
+        .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(45deg, #00b7ff, #0095cc);
+            top: -250px;
+            right: -100px;
+            animation-delay: 0s;
         }
 
-        .topbar .tag {
-            font-size: 12px;
-            color: var(--text-muted);
-            background: var(--bg-card);
-            padding: 4px 12px;
-            border-radius: 20px;
-            border: 1px solid var(--border);
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(45deg, #10b981, #059669);
+            bottom: -200px;
+            left: -100px;
+            animation-delay: 5s;
         }
 
-        /* Hero */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        /* Hero Section */
         .hero {
-            padding: 72px 0 48px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-        }
-
-        .eyebrow {
-            font-family: 'Space Mono', monospace;
-            font-size: 12px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 20px;
-            display: inline-block;
-            background: var(--accent-glow);
-            padding: 6px 16px;
-            border-radius: 4px;
-            border: 1px solid rgba(0, 227, 158, 0.2);
+            padding: 40px 20px;
+            position: relative;
         }
 
         .hero h1 {
-            font-size: clamp(32px, 6vw, 48px);
+            font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 700;
-            line-height: 1.15;
             margin-bottom: 24px;
-            letter-spacing: -0.5px;
+            color: #ffffff;
+            letter-spacing: -0.03em;
+            animation: fadeInUp 1s ease-out;
         }
 
-        .hero h1 .highlight {
-            color: var(--accent);
+        .hero p {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            color: #a1a1a6;
+            max-width: 700px;
+            margin: 0 auto 48px;
+            font-weight: 400;
+            line-height: 1.5;
+            animation: fadeInUp 1s ease-out 0.2s backwards;
         }
 
-        .hero .subtitle {
-            font-size: 18px;
-            color: var(--text-secondary);
-            max-width: 540px;
-            margin: 0 auto 36px;
-            line-height: 1.7;
-        }
-
-        /* Section */
-        .section {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 48px 36px;
-            margin-bottom: 32px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent), var(--gold));
-        }
-
-        .section:hover {
-            border-color: rgba(0, 227, 158, 0.3);
-            transform: translateY(-2px);
-        }
-
-        .section h2 {
-            font-size: 26px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            display: flex;
+        .hero-cta {
+            display: inline-flex;
             align-items: center;
             gap: 12px;
-        }
-
-        .section .icon {
-            font-size: 28px;
-        }
-
-        .section .sub {
-            color: var(--text-secondary);
-            font-size: 16px;
-            margin-bottom: 28px;
-        }
-
-        /* Link Card */
-        .link-card {
-            background: var(--bg-primary);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 16px;
-            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 16px 32px;
+            border-radius: 980px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #f5f5f7;
             text-decoration: none;
-            display: block;
-            color: inherit;
-        }
-
-        .link-card:last-child {
-            margin-bottom: 0;
-        }
-
-        .link-card:hover {
-            border-color: var(--accent);
-            background: var(--bg-card-hover);
-            transform: translateX(4px);
-        }
-
-        .link-title {
-            font-weight: 600;
-            font-size: 18px;
-            margin-bottom: 8px;
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .link-description {
-            font-size: 15px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        .arrow {
-            color: var(--accent);
-            font-size: 20px;
-            transition: transform 0.2s ease;
-        }
-
-        .link-card:hover .arrow {
-            transform: translateX(4px);
-        }
-
-        /* Prop Firm Card */
-        .prop-firm-card {
-            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-card-hover) 100%);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: block;
-            color: inherit;
-            position: relative;
-        }
-
-        .prop-firm-card:last-child {
-            margin-bottom: 0;
-        }
-
-        .prop-firm-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 227, 158, 0.2);
-        }
-
-        .firm-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 12px;
-        }
-
-        .firm-name {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-
-        .discount-badge {
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dim) 100%);
-            color: var(--bg-primary);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 700;
-            box-shadow: 0 4px 12px var(--accent-glow);
-            letter-spacing: 0.5px;
-        }
-
-        .rating {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-
-        .stars {
-            color: var(--gold);
-            font-size: 16px;
-            letter-spacing: 2px;
-        }
-
-        .rating-text {
-            color: var(--text-muted);
-            font-size: 14px;
+            font-size: 1.1rem;
             font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeInUp 1s ease-out 0.4s backwards;
         }
 
-        .firm-description {
-            color: var(--text-secondary);
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 12px;
+        .hero-cta:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(0, 183, 255, 0.3);
         }
 
-        .cta-text {
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            opacity: 0.6;
+            animation: bounce 2s infinite;
         }
 
-        .cta-arrow {
-            transition: transform 0.2s ease;
+        .scroll-indicator::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 2px;
+            animation: scroll 1.5s infinite;
         }
 
-        .prop-firm-card:hover .cta-arrow {
-            transform: translateX(4px);
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
         }
 
-        /* Footer */
-        .footer {
-            border-top: 1px solid var(--border);
-            padding: 32px 0;
-            text-align: center;
-            margin-top: 48px;
+        @keyframes scroll {
+            0% { opacity: 0; transform: translateX(-50%) translateY(0); }
+            40% { opacity: 1; }
+            80% { opacity: 0; transform: translateX(-50%) translateY(12px); }
+            100% { opacity: 0; }
         }
 
-        .footer p {
-            font-size: 12px;
-            color: var(--text-muted);
-            line-height: 1.8;
-        }
-
-        /* Animations */
-        @keyframes fadeUp {
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -348,138 +169,340 @@
             }
         }
 
-        .hero,
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 20px;
+        }
+
+        /* Section */
         .section {
-            animation: fadeUp 0.6s ease-out both;
+            margin-bottom: 160px;
         }
 
-        .section:nth-child(1) {
-            animation-delay: 0.1s;
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
         }
 
-        .section:nth-child(2) {
-            animation-delay: 0.2s;
+        .section-label {
+            display: inline-block;
+            color: #00d9ff;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
         }
 
-        .section:nth-child(3) {
-            animation-delay: 0.3s;
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #f5f5f7;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .section-description {
+            font-size: 1.25rem;
+            color: #a1a1a6;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Feature Cards - Flowing Layout */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 48px 32px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: block;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 183, 255, 0.5), transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(0, 183, 255, 0.3);
+            transform: translateY(-8px);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+            display: block;
+            filter: grayscale(1);
+            transition: filter 0.4s;
+        }
+
+        .feature-card:hover .feature-icon {
+            filter: grayscale(0);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: #f5f5f7;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: #a1a1a6;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        /* Large Feature Sections */
+        .large-feature {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 120px;
+        }
+
+        .large-feature:nth-child(even) {
+            direction: rtl;
+        }
+
+        .large-feature:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .feature-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .feature-content p {
+            font-size: 1.2rem;
+            color: #a1a1a6;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .feature-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #00d9ff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: gap 0.3s;
+        }
+
+        .feature-link:hover {
+            gap: 12px;
+        }
+
+        .feature-visual {
+            background: linear-gradient(135deg, rgba(0, 183, 255, 0.1), rgba(16, 185, 129, 0.1));
+            border-radius: 24px;
+            padding: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        /* Coming Soon Banner */
+        .coming-soon-banner {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(0, 183, 255, 0.1));
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 32px;
+            padding: 80px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .coming-soon-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            to { left: 100%; }
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+            padding: 8px 20px;
+            border-radius: 980px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .coming-soon-banner h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .coming-soon-banner p {
+            font-size: 1.25rem;
+            color: #a1a1a6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6e6e73;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 120px;
         }
 
         /* Responsive */
-        @media (max-width: 600px) {
-            .section {
-                padding: 36px 24px;
+        @media (max-width: 768px) {
+            .large-feature {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
 
-            .firm-header {
-                flex-direction: column;
-                gap: 12px;
+            .large-feature:nth-child(even) {
+                direction: ltr;
             }
 
-            .discount-badge {
-                align-self: flex-start;
-            }
-
-            .hero {
-                padding: 48px 0 36px;
+            .feature-visual {
+                min-height: 300px;
+                padding: 40px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="topbar">
-        <div class="topbar-inner">
-            <div class="logo">VEDICTRADES</div>
-            <div class="tag">Resources Hub</div>
-        </div>
+    <div class="gradient-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
     </div>
 
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Vedictrades</h1>
+        <p>Master prop firm trading with proven strategies and comprehensive guides from a trader who's withdrawn $40,000+</p>
+        <a href="#guides" class="hero-cta">
+            Explore Guides
+            <span>→</span>
+        </a>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- Main Content -->
     <div class="container">
-        <!-- Hero -->
-        <section class="hero">
-            <div class="eyebrow">Your Path to Funded Trading</div>
-            <h1>Master <span class="highlight">Prop Firm Trading</span></h1>
-            <p class="subtitle">Everything you need to get funded and scale your trading career</p>
+
+        <!-- Prop Firm Resources -->
+        <section class="section" id="guides">
+            <div class="section-header">
+                <span class="section-label">Prop Trading</span>
+                <h2 class="section-title">Everything You Need to Get Funded</h2>
+                <p class="section-description">From passing your first challenge to scaling multiple accounts</p>
+            </div>
+
+            <div class="feature-grid">
+                <a href="https://vedictrades.blog/prop-firm-account-guides/" class="feature-card">
+                    <span class="feature-icon">📖</span>
+                    <h3>Comprehensive Guides</h3>
+                    <p>Step-by-step strategies for passing challenges, managing drawdown, and avoiding common mistakes that breach accounts</p>
+                </a>
+
+                <a href="https://drive.google.com/file/d/1TMkRIpOa6-DN_j0FDpcCtNZAEfccrjLu/view?pli=1" target="_blank" class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h3>Get Funded Blueprint</h3>
+                    <p>The exact 7-step framework to pass prop firm challenges</p>
+                </a>
+
+                <a href="https://vedictrades.blog/wp-content/reviews/" class="feature-card">
+                    <span class="feature-icon">⭐</span>
+                    <h3>Honest Reviews</h3>
+                    <p>Real experience with major prop firms. What works, what doesn't, and which rules actually matter</p>
+                </a>
+
+                <a href="https://vedictrades.blog/wp-content/interviews/" class="feature-card">
+                    <span class="feature-icon">🎤</span>
+                    <h3>Trader Interviews</h3>
+                    <p>Learn from profitable funded traders—their strategies, mistakes, and what it takes to succeed</p>
+                </a>
+            </div>
         </section>
 
-        <!-- 7 Step Guide (TOP) -->
+        <!-- ICT Education -->
+        <section class="large-feature">
+            <div class="feature-content">
+                <h2>Master ICT Concepts</h2>
+                <p>Comprehensive guides on Inner Circle Trader methodology—market structure, order blocks, liquidity, and smart money trading concepts.</p>
+                <a href="https://vedictrades.blog/ict-trading-guide/" class="feature-link">
+                    Explore ICT Guides
+                    <span>→</span>
+                </a>
+            </div>
+            <div class="feature-visual">
+                📊
+            </div>
+        </section>
+
+        <!-- TheVault Coming Soon -->
         <section class="section">
-            <h2><span class="icon">🎯</span> Get Funded Blueprint</h2>
-            <p class="sub">The exact 7-step framework to pass prop firm challenges</p>
-            <a href="https://drive.google.com/file/d/1TMkRIpOa6-DN_j0FDpcCtNZAEfccrjLu/view?usp=sharing" class="link-card" target="_blank">
-                <div class="link-title">
-                    7 Step Guide to Get Funded
-                    <span class="arrow">→</span>
-                </div>
-                <div class="link-description">
-                    Follow my proven methodology to successfully pass prop firm challenges and secure funding faster
-                </div>
-            </a>
+            <div class="coming-soon-banner">
+                <span class="badge">Coming Soon</span>
+                <h2>TheVault</h2>
+                <p>Live trading service with real-time setups, detailed analysis, and trade execution. Join the waitlist to be notified at launch.</p>
+            </div>
         </section>
 
-        <!-- Trading Education -->
-        <section class="section">
-            <h2><span class="icon">📚</span> Trading Education</h2>
-            <p class="sub">Comprehensive guides, strategies, and insights</p>
-            <a href="https://vedictrades.blog" class="link-card" target="_blank">
-                <div class="link-title">
-                    VedicTrades Blog
-                    <span class="arrow">→</span>
-                </div>
-                <div class="link-description">
-                    Discover comprehensive trading guides, strategies, and insights to elevate your trading journey
-                </div>
-            </a>
-        </section>
-
-        <!-- Prop Firms -->
-        <section class="section">
-            <h2><span class="icon">⭐</span> My Top Choice for Prop Firms</h2>
-            <p class="sub">Trusted firms with verified payouts and trader support</p>
-
-            <a href="https://lucidtrading.com/ref/vedictrades/" class="prop-firm-card" target="_blank">
-                <div class="firm-header">
-                    <div class="firm-name">Lucid Trading</div>
-                    <div class="discount-badge">50% OFF</div>
-                </div>
-                <div class="rating">
-                    <span class="stars">★★★★★</span>
-                    <span class="rating-text">5.0 Rating</span>
-                </div>
-                <div class="firm-description">
-                    Industry-leading prop firm with exceptional trader support, transparent policies, and the best payout structure in the market
-                </div>
-                <div class="cta-text">
-                    Start your journey with Lucid Trading
-                    <span class="cta-arrow">→</span>
-                </div>
-            </a>
-
-            <a href="https://tradeify.co/?ref=Vedic" class="prop-firm-card" target="_blank">
-                <div class="firm-header">
-                    <div class="firm-name">Tradeify</div>
-                    <div class="discount-badge">40% OFF</div>
-                </div>
-                <div class="rating">
-                    <span class="stars">★★★★★</span>
-                    <span class="rating-text">5.0 Rating</span>
-                </div>
-                <div class="firm-description">
-                    Trusted by thousands of traders worldwide with flexible evaluation options and competitive scaling plans
-                </div>
-                <div class="cta-text">
-                    Explore Tradeify opportunities
-                    <span class="cta-arrow">→</span>
-                </div>
-            </a>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>© 2024 VedicTrades. Empowering traders worldwide.</p>
-            <p style="margin-top: 8px;">Trading involves risk. Past performance is not indicative of future results.</p>
-        </footer>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 Vedic Trades · Some links may be affiliate links · Recommendations based on real trading experience</p>
+    </footer>
 </body>
 </html>
