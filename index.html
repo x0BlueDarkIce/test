@@ -3,8 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vedic Trades - Prop Firm Guides & Trading Education</title>
-    <meta name="description" content="Master prop firm trading with proven strategies, honest reviews, and comprehensive guides from a trader who's withdrawn $260,000+">
+    
+    <!-- Primary Meta Tags -->
+    <title>Vedic Trades - Prop Firm Trading Guides | $260K+ Withdrawn | ICT Strategy</title>
+    <meta name="title" content="Vedic Trades - Prop Firm Trading Guides | $260K+ Withdrawn">
+    <meta name="description" content="Learn prop firm trading from a verified trader who's withdrawn $260,000+. Free guides on passing evaluations, ICT concepts, honest prop firm reviews, and proven strategies.">
+    <meta name="keywords" content="prop firm trading, prop trading guides, ICT trading, funded trader, prop firm reviews, pass prop firm challenge, trading education, Vedic Trades">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="Vedic Trades">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vedictrades.blog/">
+    <meta property="og:title" content="Vedic Trades - Prop Firm Trading Guides | $260K+ Withdrawn">
+    <meta property="og:description" content="Learn prop firm trading from a verified trader who's withdrawn $260,000+. Free guides on passing evaluations, ICT concepts, and proven strategies.">
+    <meta property="og:site_name" content="Vedic Trades">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://vedictrades.blog/">
+    <meta property="twitter:title" content="Vedic Trades - Prop Firm Trading Guides | $260K+ Withdrawn">
+    <meta property="twitter:description" content="Learn prop firm trading from a verified trader who's withdrawn $260,000+. Free guides, ICT concepts, and proven strategies.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://vedictrades.blog/">
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Vedic Trades",
+      "url": "https://vedictrades.blog/",
+      "description": "Prop firm trading education and guides from a verified trader who has withdrawn over $260,000",
+      "author": {
+        "@type": "Person",
+        "name": "Vedic Trades"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Vedic Trades",
+      "url": "https://vedictrades.blog/",
+      "description": "Comprehensive prop firm trading education, ICT guides, and honest reviews",
+      "sameAs": []
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -68,23 +117,31 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 40px 20px;
+            padding: 100px 20px 60px;
             position: relative;
         }
 
         .hero h1 {
             font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 700;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             color: #ffffff;
             letter-spacing: -0.03em;
             animation: fadeInUp 1s ease-out;
+        }
+
+        .hero .byline {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 600;
+            color: #a1a1a6;
+            margin-bottom: 32px;
+            animation: fadeInUp 1s ease-out 0.1s backwards;
         }
 
         .hero p {
@@ -95,6 +152,95 @@
             font-weight: 400;
             line-height: 1.5;
             animation: fadeInUp 1s ease-out 0.2s backwards;
+        }
+
+        .editors-pick-title {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #f5f5f7;
+            margin-bottom: 24px;
+            text-align: center;
+            text-shadow: 0 0 20px rgba(139, 157, 255, 0.3),
+                         0 0 40px rgba(139, 157, 255, 0.15);
+        }
+
+        .hero-articles {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 40px;
+        }
+
+        .articles-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .article-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 28px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            text-decoration: none;
+            transition: all 0.3s;
+            gap: 32px;
+        }
+
+        .article-item:last-child {
+            border-bottom: none;
+        }
+
+        .article-item:hover {
+            padding-left: 8px;
+        }
+
+        .article-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .article-title {
+            font-size: 1.2rem;
+            color: #f5f5f7;
+            font-weight: 600;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .article-desc {
+            font-size: 0.95rem;
+            color: #a1a1a6;
+            line-height: 1.6;
+        }
+
+        .article-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #f5f5f7;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            flex-shrink: 0;
+            white-space: nowrap;
+            opacity: 0.7;
+        }
+
+        .article-item:hover .article-link {
+            gap: 12px;
+            opacity: 1;
+        }
+
+        .article-item:hover .article-link {
+            gap: 12px;
         }
 
         .hero-cta {
@@ -120,44 +266,6 @@
             box-shadow: 0 20px 40px rgba(0, 183, 255, 0.3);
         }
 
-        .scroll-indicator {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 24px;
-            height: 40px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 12px;
-            opacity: 0.6;
-            animation: bounce 2s infinite;
-        }
-
-        .scroll-indicator::before {
-            content: '';
-            position: absolute;
-            top: 8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 8px;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 2px;
-            animation: scroll 1.5s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(10px); }
-        }
-
-        @keyframes scroll {
-            0% { opacity: 0; transform: translateX(-50%) translateY(0); }
-            40% { opacity: 1; }
-            80% { opacity: 0; transform: translateX(-50%) translateY(12px); }
-            100% { opacity: 0; }
-        }
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -171,24 +279,19 @@
 
         /* Container */
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 120px 20px;
+            padding: 100px 20px;
         }
 
         /* Section */
         .section {
-            margin-bottom: 160px;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 120px;
         }
 
         .section-label {
             display: inline-block;
-            color: #00d9ff;
+            color: #a1a1a6;
             font-size: 0.875rem;
             font-weight: 600;
             letter-spacing: 0.08em;
@@ -197,159 +300,154 @@
         }
 
         .section-title {
-            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 700;
             color: #f5f5f7;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             letter-spacing: -0.02em;
         }
 
-        .section-description {
-            font-size: 1.25rem;
-            color: #a1a1a6;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        /* Feature Cards - Flowing Layout */
-        .feature-grid {
+        /* Must Read Articles */
+        .articles-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 24px;
+            gap: 20px;
         }
 
-        .feature-card {
+        /* Navigation Hub */
+        .nav-hub {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 24px;
-            padding: 48px 32px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            text-decoration: none;
-            display: block;
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(0, 183, 255, 0.5), transparent);
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-
-        .feature-card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(0, 183, 255, 0.3);
-            transform: translateY(-8px);
-        }
-
-        .feature-card:hover::before {
-            opacity: 1;
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 24px;
-            display: block;
-            filter: grayscale(1);
-            transition: filter 0.4s;
-        }
-
-        .feature-card:hover .feature-icon {
-            filter: grayscale(0);
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            color: #f5f5f7;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .feature-card p {
-            color: #a1a1a6;
-            font-size: 1.05rem;
-            line-height: 1.6;
-        }
-
-        /* Large Feature Sections */
-        .large-feature {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
+            padding: 48px;
             margin-bottom: 120px;
         }
 
-        .large-feature:nth-child(even) {
-            direction: rtl;
-        }
-
-        .large-feature:nth-child(even) > * {
-            direction: ltr;
-        }
-
-        .feature-content h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 700;
-            margin-bottom: 24px;
-            letter-spacing: -0.02em;
-        }
-
-        .feature-content p {
-            font-size: 1.2rem;
-            color: #a1a1a6;
-            line-height: 1.7;
+        .nav-hub h2 {
+            font-size: 2rem;
+            color: #f5f5f7;
             margin-bottom: 32px;
+            font-weight: 700;
+            text-align: center;
         }
 
-        .feature-link {
-            display: inline-flex;
+        .nav-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .nav-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .nav-item:last-child {
+            border-bottom: none;
+        }
+
+        .nav-item:hover {
+            padding-left: 8px;
+        }
+
+        .nav-item-content {
+            flex: 1;
+        }
+
+        .nav-item-title {
+            font-size: 1.25rem;
+            color: #f5f5f7;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .nav-item-desc {
+            font-size: 0.95rem;
+            color: #a1a1a6;
+            line-height: 1.4;
+        }
+
+        .nav-item-link {
+            display: flex;
             align-items: center;
             gap: 8px;
             color: #00d9ff;
-            text-decoration: none;
+            font-size: 1rem;
             font-weight: 500;
-            font-size: 1.1rem;
             transition: gap 0.3s;
+            flex-shrink: 0;
+            margin-left: 24px;
         }
 
-        .feature-link:hover {
+        .nav-item:hover .nav-item-link {
             gap: 12px;
         }
 
-        .feature-visual {
-            background: linear-gradient(135deg, rgba(0, 183, 255, 0.1), rgba(16, 185, 129, 0.1));
-            border-radius: 24px;
-            padding: 60px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
+        /* About Section */
+        .about-section {
+            text-align: left;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        /* Coming Soon Banner */
-        .coming-soon-banner {
+        .about-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            color: #a1a1a6;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .stat-item {
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #f5f5f7;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #a1a1a6;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .vault-section {
+            margin-top: 60px;
+            padding: 32px;
             background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(0, 183, 255, 0.1));
             border: 1px solid rgba(16, 185, 129, 0.2);
-            border-radius: 32px;
-            padding: 80px 60px;
-            text-align: center;
+            border-radius: 20px;
+            text-align: left;
             position: relative;
             overflow: hidden;
         }
 
-        .coming-soon-banner::before {
+        .vault-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -364,31 +462,21 @@
             to { left: 100%; }
         }
 
-        .badge {
-            display: inline-block;
-            background: rgba(16, 185, 129, 0.2);
-            color: #6ee7b7;
-            padding: 8px 20px;
-            border-radius: 980px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            border: 1px solid rgba(16, 185, 129, 0.3);
+        .vault-section h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #f5f5f7;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
         }
 
-        .coming-soon-banner h2 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .coming-soon-banner p {
-            font-size: 1.25rem;
+        .vault-section p {
+            font-size: 1.1rem;
             color: #a1a1a6;
-            max-width: 600px;
-            margin: 0 auto;
+            margin: 0;
+            position: relative;
+            z-index: 1;
         }
 
         /* Footer */
@@ -403,18 +491,20 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .large-feature {
+            .article-item,
+            .nav-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .article-link,
+            .nav-item-link {
+                margin-left: 0;
+            }
+
+            .about-stats {
                 grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .large-feature:nth-child(even) {
-                direction: ltr;
-            }
-
-            .feature-visual {
-                min-height: 300px;
-                padding: 40px;
             }
         }
     </style>
@@ -427,74 +517,109 @@
 
     <!-- Hero -->
     <section class="hero">
-        <h1>Vedictrades</h1>
-        <p>Master prop firm trading with proven strategies and comprehensive guides from a trader who's withdrawn $260,000+</p>
-        <a href="#guides" class="hero-cta">
-            Explore Guides
-            <span>→</span>
-        </a>
-        <div class="scroll-indicator"></div>
+        <h1>Prop Firm Trading Guides</h1>
+        <div class="byline">by Vedictrades</div>
+        <p>Learn from a verified trader who's withdrawn $260,000+ from prop firms. Free guides on passing evaluations, ICT concepts, and proven strategies that actually work.</p>
+        
+        <div class="hero-articles">
+            <div class="editors-pick-title">Editor's Pick</div>
+            <div class="articles-list">
+                <a href="https://vedictrades.blog/trading-psychology-guide/" class="article-item">
+                    <div class="article-content">
+                        <div class="article-title">How to Fix Trading Psychology: The 2-Account Method</div>
+                        <div class="article-desc">This two-account framework helped me stop revenge trading and over-risking. One account for discipline, one for bad habits. After 30 days, I had proof of what was costing me money—and my brain finally fixed itself.</div>
+                    </div>
+                    <span class="article-link">Read article →</span>
+                </a>
+                
+                <a href="https://vedictrades.blog/best-prop-firm-for-beginners/" class="article-item">
+                    <div class="article-content">
+                        <div class="article-title">Best Prop Firm for Beginners: What I Wish I Knew Before Losing $6,000</div>
+                        <div class="article-desc">I wasted $6,000 on 17 failed challenges at the wrong firms before finding one designed for beginners. This guide breaks down the 5 features you actually need—and why affordable challenges matter more than impressive account sizes.</div>
+                    </div>
+                    <span class="article-link">Read article →</span>
+                </a>
+                
+                <a href="https://drive.google.com/file/d/1TMkRIpOa6-DN_j0FDpcCtNZAEfccrjLu/view?pli=1" target="_blank" class="article-item">
+                    <div class="article-content">
+                        <div class="article-title">7 Steps to Pass Any Prop Firm Challenge (Free Blueprint)</div>
+                        <div class="article-desc">The exact framework that helped me go from 17 failed evaluations to $260K in payouts. I invested $800 and withdrew $32,000 in under 30 days using these 7 steps—now you can too.</div>
+                    </div>
+                    <span class="article-link">Download free →</span>
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- Main Content -->
     <div class="container">
 
-        <!-- Prop Firm Resources -->
-        <section class="section" id="guides">
-            <div class="section-header">
-                <span class="section-label">Prop Trading</span>
-                <h2 class="section-title">Everything You Need to Get Funded</h2>
-                <p class="section-description">From passing your first challenge to scaling multiple accounts</p>
-            </div>
-
-            <div class="feature-grid">
-                <a href="https://vedictrades.blog/prop-firm-account-guides/" class="feature-card">
-                    <span class="feature-icon">📖</span>
-                    <h3>Comprehensive Guides</h3>
-                    <p>Step-by-step strategies for passing challenges, managing drawdown, and avoiding common mistakes that breach accounts</p>
+        <!-- Explore Guides - Navigation Hub -->
+        <div class="nav-hub">
+            <h2>Explore Guides</h2>
+            <div class="nav-list">
+                <a href="https://vedictrades.blog/prop-firm-account-guides/" class="nav-item">
+                    <div class="nav-item-content">
+                        <div class="nav-item-title">Prop Firm Guides</div>
+                        <div class="nav-item-desc">Understand the nature of prop challenges and how to crack them</div>
+                    </div>
+                    <span class="nav-item-link">Learn more →</span>
                 </a>
-
-                <a href="https://drive.google.com/file/d/1TMkRIpOa6-DN_j0FDpcCtNZAEfccrjLu/view?pli=1" target="_blank" class="feature-card">
-                    <span class="feature-icon">🎯</span>
-                    <h3>Get Funded Blueprint</h3>
-                    <p>The exact 7-step framework to pass prop firm challenges</p>
+                
+                <a href="https://vedictrades.blog/ict-trading-guide/" class="nav-item">
+                    <div class="nav-item-content">
+                        <div class="nav-item-title">ICT Guides</div>
+                        <div class="nav-item-desc">Master smart money concepts, order blocks, and market structure</div>
+                    </div>
+                    <span class="nav-item-link">Learn more →</span>
                 </a>
-
-                <a href="https://vedictrades.blog/wp-content/reviews/" class="feature-card">
-                    <span class="feature-icon">⭐</span>
-                    <h3>Honest Reviews</h3>
-                    <p>Real experience with major prop firms. What works, what doesn't, and which rules actually matter</p>
+                
+                <a href="https://vedictrades.blog/wp-content/reviews/" class="nav-item">
+                    <div class="nav-item-content">
+                        <div class="nav-item-title">Honest Prop Firm Reviews</div>
+                        <div class="nav-item-desc">Real experience with major prop firms - what works and what doesn't</div>
+                    </div>
+                    <span class="nav-item-link">Learn more →</span>
                 </a>
-
-                <a href="https://vedictrades.blog/wp-content/interviews/" class="feature-card">
-                    <span class="feature-icon">🎤</span>
-                    <h3>Trader Interviews</h3>
-                    <p>Learn from profitable funded traders—their strategies, mistakes, and what it takes to succeed</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- ICT Education -->
-        <section class="large-feature">
-            <div class="feature-content">
-                <h2>Master ICT Concepts</h2>
-                <p>Comprehensive guides on Inner Circle Trader methodology—market structure, order blocks, liquidity, and smart money trading concepts.</p>
-                <a href="https://vedictrades.blog/ict-trading-guide/" class="feature-link">
-                    Explore ICT Guides
-                    <span>→</span>
+                
+                <a href="https://vedictrades.blog/wp-content/interviews/" class="nav-item">
+                    <div class="nav-item-content">
+                        <div class="nav-item-title">Trader Interviews</div>
+                        <div class="nav-item-desc">Learn from profitable funded traders and their proven strategies</div>
+                    </div>
+                    <span class="nav-item-link">Learn more →</span>
                 </a>
             </div>
-            <div class="feature-visual">
-                📊
-            </div>
-        </section>
+        </div>
 
-        <!-- TheVault Coming Soon -->
-        <section class="section">
-            <div class="coming-soon-banner">
-                <span class="badge">Coming Soon</span>
-                <h2>TheVault</h2>
-                <p>Live trading service with real-time setups, detailed analysis, and trade execution. Join the waitlist to be notified at launch.</p>
+        <!-- About Me -->
+        <section class="about-section">
+            <span class="section-label">About</span>
+            <h2>Vedictrades</h2>
+            <p>I'm a full-time prop firm trader who's withdrawn over $260,000 from multiple prop firms. I created this site to share what actually works—no fluff, no BS.</p>
+            <p>Everything you see here is based on real trading experience, verified payouts, and strategies that I personally use to stay funded.</p>
+            
+            <div class="about-stats">
+                <div class="stat-item">
+                    <div class="stat-number">$260K+</div>
+                    <div class="stat-label">Withdrawn</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">5+ Years</div>
+                    <div class="stat-label">Trading</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">7+</div>
+                    <div class="stat-label">Students Mentored</div>
+                </div>
+            </div>
+
+            <!-- TheVault Coming Soon -->
+            <div class="vault-section">
+                <h3>TheVault</h3>
+                <p>Live trading service with real-time setups, detailed analysis, and trade execution. Coming soon!</p>
             </div>
         </section>
 
